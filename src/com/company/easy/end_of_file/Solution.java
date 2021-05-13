@@ -14,5 +14,6 @@ public class Solution {
             System.out.printf("%d %s\n", count, str);
             count++;
         }
+        scan.close();
     }
 }
