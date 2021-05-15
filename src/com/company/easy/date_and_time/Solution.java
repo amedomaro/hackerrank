@@ -4,6 +4,7 @@ import java.io.*;
 import java.math.*;
 import java.security.*;
 import java.text.*;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
@@ -21,7 +22,8 @@ class Result {
      */
 
     public static String findDay(int month, int day, int year) {
-
+        LocalDate ld = LocalDate.of(year, month, day);
+        return ld.getDayOfWeek().name();
     }
 
 }
