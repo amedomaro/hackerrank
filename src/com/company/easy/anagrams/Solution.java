@@ -17,9 +17,11 @@ public class Solution {
 
                     if (a.charAt(i) == sb.charAt(j)) {
                         sb.deleteCharAt(j);
-                    }
-                    if (sb.length() == 0) {
-                        flag = (i == a.length() - 1);
+
+                        if (sb.length() == 0) {
+                            flag = (i == a.length() - 1);
+                        }
+                        break;
                     }
                 }
             }
