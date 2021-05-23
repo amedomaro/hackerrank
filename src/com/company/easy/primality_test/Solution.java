@@ -13,14 +13,20 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
-
 public class Solution {
+
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
+            String n = bufferedReader.readLine();
 
-        String n = bufferedReader.readLine();
+            if (n.matches("(\\d+)")) {
+                BigInteger bigInteger = new BigInteger(n);
+                System.out.println(bigInteger.isProbablePrime(10) ? "prime" : "not prime");
+            }
 
-        bufferedReader.close();
+        } catch (IOException exception) {
+            System.out.println("not prime");
+        }
     }
 }
 
