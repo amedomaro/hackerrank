@@ -8,12 +8,11 @@ public class Solution {
 
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
+        int[] a = new int[n];
+
+        a = Arrays.stream(a).map(i -> scan.nextInt()).toArray();
+        Arrays.stream(a).forEach(System.out::println);
 
         scan.close();
-
-        // Prints each sequential element in array a
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
     }
 }
